@@ -21,7 +21,7 @@ class School
     end
 
     def sort
-        @roster.sort.to_h
+        #@roster.sort.to_h
 
         @roster.map do |grade, students|
             @roster[grade]=students.sort
