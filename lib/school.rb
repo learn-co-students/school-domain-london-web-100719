@@ -2,11 +2,10 @@ require "pry"
 
 class School
 
+    # attr_accessor :roster
+
     def initialize(name)
         @name = name
-    end
-   
-    def roster
         @roster = {}
     end
 
@@ -14,7 +13,7 @@ class School
         @student_name = student_name
         @grade = grade
 
-        @roster[grade] ||= [student_name]
+        @roster[grade] ||= []
         @roster[grade] << student_name
     end
 
