@@ -16,6 +16,7 @@ class School
 
         if @roster[grade]
             @roster[grade] ||= []
+        end
         
         @roster[grade].push(student_name)
     end
