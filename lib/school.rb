@@ -22,8 +22,7 @@ class School
     end
 
     def sort
-        @roster.sort_by do |grade, students_array|
-            binding.pry
+        @roster.each do |grade, students_array|
             @roster[grade] = students_array.sort
         end
     end
