@@ -23,6 +23,7 @@ class School
 
     def sort
         @roster.sort_by do |grade, students_array|
+            binding.pry
             @roster[grade] = students_array.sort
         end
     end
