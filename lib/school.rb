@@ -1,3 +1,5 @@
+require "pry"
+
 class School
 
     attr_accessor :roster
@@ -19,8 +21,12 @@ class School
         @roster[grade]
     end
 
-    # def sort
-    #     @roster.sort_by_value
-    # end
+    def sort
+        @roster.sort_by do |grade, students_array|
+            binding.pry
+            students_array.sort
+            
+        end
+    end
     
 end
