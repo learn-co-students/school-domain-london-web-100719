@@ -16,11 +16,9 @@ class School
     end
 
     def sort
-        sorted = {}
-        sorted =  sorted.merge(@roster)
-        sorted.each do |grade, names|
-            sorted[grade] = names.sort
-            sorted = {grade => sorted[grade]}
+        @roster.each do |grade, names|
+            @roster[grade] = names.sort
         end
+        @roster
     end
 end
